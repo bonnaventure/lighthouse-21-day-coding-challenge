@@ -1,0 +1,32 @@
+
+const finalPosition = (moves) => {
+  
+// Code here! let i = 0; i < samples.length; i++
+var y = 0;
+var x = 0;
+
+for (let i = 0; i < moves.length; i++) {
+  	
+	switch (moves[i]) {
+		case "north":
+		y++;
+		break;
+
+		case "south":
+		y--;
+		break;
+		
+		case "east":
+		x++;
+		break;
+		
+		case "west":
+		x--;
+		break;
+	
+	}
+
+}
+
+return [x, y];
+};
