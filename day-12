@@ -1,0 +1,19 @@
+const checkAir = function (samples, threshold) {
+  // Code here!
+var dirtySamples = 0;
+var currentReading = 0;
+
+  for (let i = 0; i < samples.length; i++) {
+    if (samples[i] === "dirty") {
+      dirtySamples++;
+    }
+     
+  }
+  currentReading = (dirtySamples / samples.length);
+ // console.log(currentReading);
+  if (currentReading > threshold) {
+    return "Polluted";
+  } else {
+    return "Clean";
+  }
+};
