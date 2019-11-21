@@ -1,0 +1,49 @@
+const countTickets = (tickets) => {
+  // Code here!
+var count = {
+    red: 0,
+    blue: 0,
+    green: 0,
+    };
+ 
+  
+  for (i = 0; i < tickets.length; i++) {
+    if (tickets[i] === "red") {
+      count.red++;
+    } else if (tickets[i] === "green") {
+      count.green++;
+    } else if (tickets[i] === "blue") {
+      count.blue++;
+    }
+    
+  }
+ return(count);
+};
+
+const bestOdds = (tickets, raffleEntries) => {
+  // Code here!
+ const ticketCount = countTickets(tickets);
+ var odds = {
+   red: 0,
+   blue: 0,
+   green: 0,
+ };
+  
+  
+    
+  odds.red = ticketCount.red / raffleEntries.red;
+  odds.blue = ticketCount.blue / raffleEntries.blue;
+  odds.green = ticketCount.green / raffleEntries.green;
+  
+  if (odds.red > odds.blue && odds.red > odds.green) {
+    return "You have the best odds of winning the red raffle.";
+  } else if (odds.blue > odds.red && odds.blue > odds.green) {
+    return "You have the best odds of winning the blue raffle.";
+  } else if (odds.green > odds.red && odds.green > odds.blue) {
+    return "You have the best odds of winning the green raffle.";
+  }
+  
+  //console.log(odds);
+ // console.log("You have the best odds of winning the "+winner+" raffle");  
+    
+};
