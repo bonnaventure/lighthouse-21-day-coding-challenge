@@ -1,0 +1,7 @@
+const doorToDoor = (volunteers, neighbourhoods) => {
+
+let result = (neighbourhoods.length / volunteers.length);
+return result;
+    
+  };
+  
