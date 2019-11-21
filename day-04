@@ -1,0 +1,19 @@
+const registerToVote = (name, unregisteredVoters) => {
+  // Code here!
+let mailingList = [];
+
+for (let b of unregisteredVoters) {
+
+  if (b !== name) {
+  mailingList.push(b);
+   
+  }
+}
+
+//console.log(unregisteredVoters[0], name) ;
+return(mailingList);
+//console.log(mailingList);
+//console.log(name);
+
+  // Remember to return a value!
+};
