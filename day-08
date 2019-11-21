@@ -1,0 +1,25 @@
+const smartGarbage = (trash, bins) => {
+
+let updatedBins = bins;
+
+  switch (trash) {
+      case 'waste' :
+        updatedBins.waste++;
+       // console.log("waste");
+        break;
+      
+      case 'recycling' :
+        updatedBins.recycling++;
+        // console.log("recycling");
+        break;
+      
+      case 'compost' :
+        updatedBins.compost++;
+        // console.log("compost");
+        break;
+  }
+    
+ return(updatedBins);
+// console.log(trash === recycling);
+  // Code here!
+};
