@@ -1,0 +1,16 @@
+const carPassing = (cars, speed) => {
+  // Code here!
+let newList = cars;
+
+var newCar = {
+  speed : speed,
+  time : Date.now()
+}; 
+//function carPush (cars, newCar) {
+  
+  newList.push(newCar); 
+  
+//}
+
+   return(newList);
+};
