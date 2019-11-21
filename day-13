@@ -1,0 +1,33 @@
+// Tip: Work on one of these functions at a time.
+const lightsOn = function(lights) {
+  // Code here!
+  for (let i = 0; i < lights.length; i++) {
+    if (lights[i].on === false) {
+      lights[i].on = true;
+    }
+  
+}
+return lights;
+};
+
+const lightsOff = function(lights) {
+  // Code here!
+    for (let i = 0; i < lights.length; i++) {
+    if (lights[i].on === true) {
+      lights[i].on = false;
+    }
+  
+}
+return lights;
+};
+
+const toggleLights = function(lights, lightsAreOn) {
+  // Code here!
+
+  if (lightsAreOn === false) {
+    lightsOn(lights); 
+  } else if (lightsAreOn === true){
+    lightsOff(lights);
+  }
+  return lights;
+};
