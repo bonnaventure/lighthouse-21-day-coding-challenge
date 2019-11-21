@@ -1,0 +1,12 @@
+const judgeVegetable = (vegetables, metric) => {
+  // Code here!
+let bestVeggie = vegetables[0];
+ 
+for (i = 0; i < vegetables.length; i++) {
+  if (vegetables[i][metric] > bestVeggie[metric]) {
+    bestVeggie = vegetables[i];
+  }
+}
+return bestVeggie.submitter;
+// console.log(bestVeggie.submitter);
+};
