@@ -1,0 +1,9 @@
+const festivalColours = color1 => {
+  // code here!
+  
+  var colours = [];
+  colours.push(color1 + 150) - 360;
+  colours.push(color1 + 210) - 360;
+  return colours;
+  
+};
