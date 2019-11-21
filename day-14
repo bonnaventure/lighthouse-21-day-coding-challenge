@@ -1,0 +1,11 @@
+const dynamicPricing = (numberOfPeople, distanceTraveled) => {
+  // Code here!
+//  console.log(numberOfPeople, distanceTraveled)
+var fare = 1;
+if (numberOfPeople >= 30) {
+	newFare = (fare + 0.25) + (distanceTraveled * 0.25);
+} else {
+	newFare = fare + (distanceTraveled * 0.25);
+}
+return '$'+newFare.toFixed(2);
+};
