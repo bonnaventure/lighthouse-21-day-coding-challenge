@@ -1,0 +1,22 @@
+const termTopics = (interviews) => {
+// Code here!
+let topicsTally = [0,0,0]; 
+
+for (let i of interviews) {
+  if (i === "smart city"){
+    topicsTally[0]++;
+  }
+  else if (i === "arts funding") {
+    topicsTally[1]++;
+  }
+  else if (i === "transportation") {
+   topicsTally[2]++;
+    
+  }
+}
+    
+return(topicsTally);
+  
+};
+
+  // Remember to return an array!
