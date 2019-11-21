@@ -1,0 +1,47 @@
+// Use the value below whenever you need the value of Pi
+
+const PI = 3.14159;
+
+const sphereVolume = function (radius) {
+  let sphereVolume = 4/3 * PI * Math.pow(radius, 3);
+  return sphereVolume;
+};
+
+const coneVolume = function (radius, height) {
+  let coneVolume = PI * Math.pow(radius, 2) * height/3;
+  return coneVolume;
+};
+
+const prismVolume = function (height, width, depth) {
+  area = width * depth;
+  let prismVolume = area * height;
+  return prismVolume;
+};
+
+const totalVolume = function (solids) {
+
+//sphereVol =  sphereVolume(radius);
+//coneVol = coneVolume(radius, height);
+volumes = [];
+
+for (i = 0; i < solids.length; i++) {
+  if (solids[i].type == 'sphere') {
+    
+    sphereVol =  sphereVolume(solids[i].radius);
+    volumes[i] = sphereVol;
+  } else if (solids[i].type == 'cone') {
+    
+    coneVol =  coneVolume(solids[i].radius, solids[i].height);
+    volumes[i] = coneVol;
+  } else if (solids[i].type == 'prism') {
+    
+    prismVol =  prismVolume(solids[i].depth, solids[i].width, solids[i].height);
+    volumes[i] = prismVol;
+  } 
+}
+function myFunc(total, num) {
+  return total + num;
+}
+return volumes.reduce(myFunc);
+//console.log(volumes);
+};
