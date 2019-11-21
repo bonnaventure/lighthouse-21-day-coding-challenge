@@ -1,0 +1,10 @@
+const busTimes = buses => {
+  // Code here!
+ let time = {};
+  for (var bus in buses) {
+    
+ time[bus] = (buses[bus].distance / buses[bus].speed);
+ 
+  }
+return (time);
+};
